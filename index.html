@@ -1,21 +1,188 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
 <title>EvenZHAng在学前端</title>
-  <script type="text/javascript">
-	
-     document.write("EvenZHAng在学前端");
-	
-  function Wopen(){
-    window.open('https://evenzhanglll.github.io/myReact/hello.html','width=600,height=400,top=100,menubar=no,toolbar=no, status=no,scrollbars=yes')  
-    
-  } 
+<style type="text/css">
+body{font-size:12px;
+  background-color: #F5F5F5;
+  /*background:url(IMG_0845.JPG) center top;*/
+}
 
-	
-  </script>
+#txt{
+    height:506.25px;
+    width:900px;
+	border:#ffffff solid 1px;
+box-shadow: 3px 3px 8px #111111;
+border-radius:5px;
+
+margin:auto;
+margin-top:20px;
+padding: 5px 5px;
+}
+#topBar{
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px #050505;
+  top:0;
+  left:0;
+  /*border:red solid 1px;*/
+  height:60px;
+  width:100%;
+  
+}
+#topBar-txt{
+  
+  background-color: #fff;
+  
+  margin-top:10px;
+  margin:0 center;
+  /*border:red solid 1px;*/
+  height:40px;
+  width:900px;
+}
+#navBar{
+  background-color: #fff;
+  display:inline;
+  float:right;
+  margin-top:10px;
+  margin:0 center;
+  /*border:red solid 1px;*/
+  height:25px;
+  width:200px;
+}
+div{margin:auto;
+  /*border:#ffffff solid 1px;*/
+}
+
+p{
+	line-height:18px;
+	text-indent:2em;}
+h2{
+  margin: auto;
+  color: #ffffff;
+}
+h1{
+  font-size: 24px;
+}
+
+
+form{
+  text-align: center;
+}
+
+.button {
+    background-color: #e7e7e7;
+    border: none;
+    color: gray;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.button1{
+  background-color: #fff;
+    border: none;
+    color: gray;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+   
+}
+.button1h:hover{
+
+    color: black;
+    
+    /*box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.40);*/
+}
+.button2:hover {
+    color: black;
+    box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.40);
+}
+</style>
 </head>
 <body>
- 	<input name="button" type="button" onClick="Wopen()" value="don't" / >
+<div id="topBar" >
+  <div id="topBar-txt">
+  <img src="rollingEgg.gif" width="30px" height="30px"/><h1 style="display:inline">  EvenZHAng</h1>
+  <div id="navBar">
+  <input name="button" type="button" class="button1 button1h" onClick="window.open('https://evenzhanglll.github.io/index.html')" value="Home" / >
+  <input style="float:right" name="button" type="button" class="button1 button1h" onClick="window.open('https://evenzhanglll.github.io/myReact/hello.html')" value="About" / >
+  </div>
+  </div>
+</div>
+    <br><br><br><br><br><br>
+    <!-- <h2 id="con" align="center">JavaScript课程</h2> -->
+  
+  <div id="txt"> 
+    <img id="imgbanner" src="IMG_0845.JPG" alt="StayTrue" width="900px" height="507px"/>
+     
+
+  </div>
+  <p></p>
+  <div>
+  <form>
+    <input type="button" class="button button2" value="Like" onclick="makeAlert()" >
+  <!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
+    <!-- <input type="button" class="button button2" value="改变颜色" onclick="changeColor()">   -->
+    <!-- <input type="button" class="button button2" value="改变宽高" onclick="changeWH()"> -->
+    <!-- <input type="button" class="button button2" value="隐藏内容" onclick="hideCon()"> -->
+    <!-- <input type="button" class="button button2" value="显示内容" onclick="displayCon()"> -->
+    <!-- <input type="button" class="button button2" value="取消设置" onclick="cancel()"> -->
+  </form>
+  </div>
+  <script type="text/javascript">
+//定义"改变颜色"的函数
+function makeAlert(){
+	alert("Thanks!~");
+}
+function changeColor(){
+    var mychar=document.getElementById("txt");
+    mychar.style.color="blue";
+}
+
+//定义"改变宽高"的函数
+function changeWH(){
+    var mychar=document.getElementById("txt");
+    var Width=prompt("宽度","200px");
+    var Height=prompt("高度","400px");
+    mychar.style.width = Width;
+    mychar.style.height = Height;
+    
+}
+
+//定义"隐藏内容"的函数
+function hideCon(){
+    var mychar=document.getElementById("txt");
+    mychar.style.display="none";
+}
+
+//定义"显示内容"的函数
+function displayCon(){
+    var mychar=document.getElementById("txt");
+    mychar.style.display="block";
+}
+
+//定义"取消设置"的函数
+function cancel(){
+    var sure=confirm("是否取消？");
+    if(sure==true){
+        var mychar=document.getElementById("txt");
+        mychar.style.color="black";
+        mychar.style.width = "600px";
+        mychar.style.height = "400px"; 
+    }
+}
+
+
+  </script>
 </body>
 </html>
