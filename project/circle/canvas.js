@@ -10,6 +10,14 @@ c.rect(0,0,innerWidth,innerHeight);
 c.fillstyle='rgb(100,100,100)';
 c.fill();
 
+
+function showTime(){
+	var today = new Date(); 
+	c.font="100px Verdana";
+	c.fillStyle = 'rgba(255,255,255,0.7)';
+	c.fillText((today.getHours()+":"+today.getMinutes()),innerWidth/2,innerHeight/2); 
+
+}
 function Circle(x,y,dx,dy,radius){
 	this.x = x;
 	this.y = y;
@@ -64,14 +72,17 @@ function animate() {
 	requestAnimationFrame(animate);
 
 	c.clearRect(0,0,innerWidth,innerHeight);
-	c.beginPath();
-	c.rect(0,0,innerWidth,innerHeight);
-	c.fillstyle='rgba(0,0,50,1)';
-	c.fill();
-	c.closePath();
+
+	//c.fillstyle='rgba(0,0,50,1)';
+	c.fillStyle = 'rgba(100,120,120,0.4)';
+	c.fillRect(0,0,innerWidth,innerHeight);
+	
+
 	for (var i =0; i<circleArray.length; i++){
 		circleArray[i].update();
 	}
+
+	showTime();
 
 	
 }
