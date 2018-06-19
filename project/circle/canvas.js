@@ -16,7 +16,7 @@ function showTime(){
 	c.font="100px Verdana";
 	c.fillStyle = 'rgba(255,255,255,0.7)';
 	c.fillText((today.getHours()+":"+today.getMinutes()),innerWidth/2,innerHeight/2); 
-	console.log(today.getHours()+":"+today.getMinutes());
+	// console.log(today.getHours()+":"+today.getMinutes());
 }
 function Circle(x,y,dx,dy,radius){
 	this.x = x;
