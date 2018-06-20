@@ -37,13 +37,14 @@ function Circle(x,y,dx,dy,radius){
 	this.draw = function(){
 		c.beginPath();
 		c.shadowBlur=10;
-		c.shadowColor="black";
+		c.shadowColor='rgba(0,0,0,0.6)';
 		c.shadowOffsetX=0;
 		c.shadowOffsetY=0;
 		c.arc(this.x,this.y,this.radius,0,Math.PI * 2, false);
 		// c.strokeStyle = 'blue';
 		// c.stroke();
-		c.fillStyle = 'rgba(150,180,180,0.4)';
+		c.fillStyle = 'rgba(150,180,180,0.5)';
+		// rgba 100 120 120 0.4
 		c.fill();
 		c.closePath();
 	}
@@ -85,6 +86,7 @@ function animate() {
 	requestAnimationFrame(animate);
 
 	c.clearRect(0,0,innerWidth,innerHeight);
+	c.shadowColor="white";
 
 	//c.fillstyle='rgba(0,0,50,1)';
 	c.fillStyle = 'rgba(100,120,120,0.4)';
