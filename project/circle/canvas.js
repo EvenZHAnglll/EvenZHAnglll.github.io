@@ -15,7 +15,16 @@ function showTime(){
 	var today = new Date(); 
 	c.font="100px Verdana";
 	c.fillStyle = 'rgba(255,255,255,0.7)';
-	c.fillText((today.getHours()+":"+today.getMinutes()),innerWidth/2,innerHeight/2); 
+	c.shadowBlur=15;
+	c.shadowColor='rgba(0,0,0,0.6)';
+	c.shadowOffsetX=-3;
+	c.shadowOffsetY=-3;
+	if(today.getMinutes()<10){
+	c.fillText((today.getHours()+":0"+today.getMinutes()),innerWidth/2,innerHeight/2); 
+	}
+	else{
+	c.fillText((today.getHours()+":"+today.getMinutes()),innerWidth/2,innerHeight/2); 	
+	}
 	// console.log(today.getHours()+":"+today.getMinutes());
 }
 function Circle(x,y,dx,dy,radius){
@@ -27,6 +36,10 @@ function Circle(x,y,dx,dy,radius){
 
 	this.draw = function(){
 		c.beginPath();
+		c.shadowBlur=10;
+		c.shadowColor="black";
+		c.shadowOffsetX=0;
+		c.shadowOffsetY=0;
 		c.arc(this.x,this.y,this.radius,0,Math.PI * 2, false);
 		// c.strokeStyle = 'blue';
 		// c.stroke();
