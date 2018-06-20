@@ -84,6 +84,8 @@ circle.draw();
 
 function animate() {
 	requestAnimationFrame(animate);
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
 
 	c.clearRect(0,0,innerWidth,innerHeight);
 	c.shadowColor="white";
