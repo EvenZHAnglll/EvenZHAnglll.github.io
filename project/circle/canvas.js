@@ -43,7 +43,7 @@ function Circle(x,y,dx,dy,radius){
 		c.arc(this.x,this.y,this.radius,0,Math.PI * 2, false);
 		// c.strokeStyle = 'blue';
 		// c.stroke();
-		c.fillStyle = 'rgba(100,120,120,0.4)';
+		c.fillStyle = 'rgba(150,180,180,0.4)';
 		c.fill();
 		c.closePath();
 	}
