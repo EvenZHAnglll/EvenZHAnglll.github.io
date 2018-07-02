@@ -36,14 +36,18 @@ function Circle(x,y,dx,dy,radius){
 
 	this.draw = function(){
 		c.beginPath();
-		c.shadowBlur=10;
-		c.shadowColor='rgba(0,0,0,0.6)';
-		c.shadowOffsetX=0;
-		c.shadowOffsetY=0;
+		c.shadowBlur=20;
+		c.shadowColor='rgba(0,0,0,0.3)';
+		c.shadowOffsetX=(innerWidth/2-this.x)/25;
+		c.shadowOffsetY=(innerHeight/2-this.y)/25;
+		//c.shadowOffsetX=0;
+		//c.shadowOffsetY=0;
+		c.shadowOffsetX=6;
+		c.shadowOffsetY=6;
 		c.arc(this.x,this.y,this.radius,0,Math.PI * 2, false);
 		// c.strokeStyle = 'blue';
 		// c.stroke();
-		c.fillStyle = 'rgba(150,180,180,0.5)';
+		c.fillStyle = 'rgba(150,180,180,0.8)';
 		// rgba 100 120 120 0.4
 		c.fill();
 		c.closePath();
