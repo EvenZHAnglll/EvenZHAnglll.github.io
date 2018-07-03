@@ -17,8 +17,8 @@ function showTime(){
 	c.fillStyle = 'rgba(255,255,255,0.7)';
 	c.shadowBlur=15;
 	c.shadowColor='rgba(0,0,0,0.6)';
-	c.shadowOffsetX=-3;
-	c.shadowOffsetY=-3;
+	c.shadowOffsetX=3;
+	c.shadowOffsetY=3;
 	if(today.getMinutes()<10){
 	c.fillText((today.getHours()+":0"+today.getMinutes()),innerWidth/2,innerHeight/2); 
 	}
