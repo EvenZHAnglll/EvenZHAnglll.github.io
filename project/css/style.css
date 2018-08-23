@@ -100,6 +100,7 @@ a:hover, a:focus {
 
 .white-text {
     color: #FFF;
+    /*mix-blend-mode: multiply;*/
 }
 
 ::-moz-selection {
@@ -233,6 +234,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     border-radius: 3px;
     -webkit-transition: 0.2s opacity;
     transition: 0.2s opacity;
+    /*mix-blend-mode: multiply;*/
 }
 
 .main-btn {
