@@ -128,7 +128,7 @@ function Star(x, y, radius, color) {
     this.color = color;
     this.velocity = {
         x: _utils2.default.randomIntFromRange(-7, 7),
-        y: 3
+        y: _utils2.default.randomIntFromRange(0, 4)
     };
     this.friction = 0.8;
     this.gravity = 1;
@@ -139,8 +139,8 @@ Star.prototype.draw = function () {
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     c.fillStyle = this.color;
-    c.shadowColor = '#e3eaef';
-    c.shadowBlur = 20;
+    c.shadowColor = '#ffffff';
+    c.shadowBlur = 25;
     c.fill();
     c.closePath();
     c.restore();
@@ -166,8 +166,8 @@ Star.prototype.update = function () {
 };
 
 Star.prototype.shatter = function () {
-    this.radius -= 3;
-    for (var i = 0; i < 8; i++) {
+    this.radius = Math.max(0, this.radius - 3);
+    for (var i = 0; i < 7; i++) {
         miniStars.push(new MiniStar(this.x, this.y, 2));
     }
     // console.log(miniStars)
@@ -215,14 +215,20 @@ MiniStar.prototype.update = function () {
 function createMountainRange(mountainAmount, height, color) {
     for (var i = 0; i < mountainAmount; i++) {
         var mountainWidth = canvas.width / mountainAmount;
+        c.save();
         c.beginPath();
         c.moveTo(i * mountainWidth, canvas.height);
         c.lineTo(i * mountainWidth + mountainWidth + 325, canvas.height);
         c.lineTo(i * mountainWidth + mountainWidth / 2, canvas.height - height);
         c.lineTo(i * mountainWidth - 325, canvas.height);
         c.fillStyle = color;
+        c.shadowBlur = 40;
+        c.shadowColor = 'rgba(255,255,255,0.15)';
+        // c.shadowOffsetX=3;
+        // c.shadowOffsetY=3;
         c.fill();
         c.closePath();
+        c.restore();
     }
 }
 // Implementation
@@ -235,7 +241,7 @@ var miniStars = void 0;
 var backgroundStars = void 0;
 var ticker = 0;
 var randomSpawnRate = 75;
-var groundHeight = 100;
+var groundHeight = canvas.height * 0.2;
 function init() {
     stars = [];
     miniStars = [];
@@ -255,6 +261,7 @@ function init() {
 
 // Animation Loop
 function animate() {
+    groundHeight = canvas.height * 0.2;
     requestAnimationFrame(animate);
     c.fillStyle = backgroundGradient;
     c.fillRect(0, 0, canvas.width, canvas.height);
@@ -265,7 +272,7 @@ function animate() {
 
     createMountainRange(1, canvas.height - canvas.height * 0.1, '#384551');
     createMountainRange(2, canvas.height - canvas.height * 0.25, '#283843');
-    createMountainRange(3, canvas.height - canvas.height * 0.4, '#26333e');
+    createMountainRange(3, canvas.height - canvas.height * 0.45, '#26333e');
 
     c.fillStyle = '#182028';
     c.fillRect(0, canvas.height - groundHeight, canvas.width, groundHeight);
