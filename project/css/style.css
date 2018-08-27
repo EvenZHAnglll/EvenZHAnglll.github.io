@@ -1106,7 +1106,7 @@ header {
 .blog {
     background-color: #FFF;
     margin: 15px 0px;
-    box-shadow: 3px 3px 8px rgba(10,10,10,0.1);
+    box-shadow: 3px 3px 8px 2px rgba(10,10,10,0.1);
     transition: 0.3s;
 }
 .blog:hover {
@@ -1116,7 +1116,7 @@ header {
     transition: 0.3s;
 }
 .blog .blog-content {
-    padding: 20px 20px 40px;
+    padding: 20px 20px 40px 20px;
 }
 
 .blog .blog-meta {
@@ -1140,7 +1140,7 @@ header {
 \*------------------------------------*/
 
 #main .blog .blog-content {
-  padding: 20px 0px 0px;
+  padding: 20px 20px 20px;
 }
 
 #main .blog {
@@ -1150,11 +1150,11 @@ header {
 /* -- blog tags -- */
 
 .blog-tags {
-    margin: 40px 0px;
+    margin: 40px 40px 20px 20px;
 }
 
 .blog-tags h5 {
-    margin-bottom: 0;
+    margin-bottom: 40px;
     display: inline-block;
 }
 
