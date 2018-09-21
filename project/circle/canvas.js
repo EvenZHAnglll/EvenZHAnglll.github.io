@@ -14,7 +14,7 @@ c.fill();
 
 function showTime(){
 	var today = new Date(); 
-	c.font='lighter 120px "Microsoft Yahei"';
+	c.font='bolder 150px "Microsoft Yahei"';
 	c.fillStyle = 'rgba(255,255,255,0.7)';
 	c.shadowBlur=15;
 	c.shadowColor='rgba(0,0,0,0.6)';

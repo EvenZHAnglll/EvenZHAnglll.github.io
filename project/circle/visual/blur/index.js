@@ -77,6 +77,9 @@ function anim(){
 		particles.push( new Particle );
 	
 	particles.map( function( particle ){ particle.step(); } );
+	ctx.font='bold 200px "Microsoft Yahei"';
+	ctx.fillStyle = 'rgba(255,255,255,0.52)';
+	ctx.fillText("Even",c.width/2.5,c.height/2);
 }
 anim();
 
@@ -85,3 +88,4 @@ window.addEventListener( 'resize', function(){
 	w = c.width = window.innerWidth;
 	h = c.height = window.innerHeight;
 })
+
