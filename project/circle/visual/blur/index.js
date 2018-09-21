@@ -7,7 +7,7 @@ var w = c.width = window.innerWidth,
 			particles: 100,
 			baseSize: 30,
 			addedSize: 20,
-			baseSpeed: 0.5,
+			baseSpeed: 0.1,
 			addedSpeed: 2,
 			colors: [ 'hsla(30,80%,50%,.5)', 'hsla(210,80%,50%,.5)' ]
 		},
