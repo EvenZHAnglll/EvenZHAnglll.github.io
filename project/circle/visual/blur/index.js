@@ -11,7 +11,6 @@ var w = c.width = window.innerWidth,
 			addedSpeed: 2,
 			colors: [ 'hsla(30,80%,50%,.5)', 'hsla(210,80%,50%,.5)' ]
 		},
-		
 		particles = [],
 		tick = 0;
 
