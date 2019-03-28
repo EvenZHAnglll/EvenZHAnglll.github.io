@@ -1109,11 +1109,11 @@ header {
     box-shadow: 3px 3px 8px 2px rgba(10,10,10,0.1);
     transition: 0.3s;
 }
-.blog:hover {
+/*.blog:hover {
     background-color: #FFF;
     margin: 15px 0px;
     box-shadow: 2px 2px 3px rgba(10,10,10,0.05);
-    transition: 0.3s;
+    transition: 0.3s;*/
 }
 .blog .blog-content {
     padding: 20px 20px 40px 20px;
