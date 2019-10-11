@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Screen Light</title>
+    <link type="text/css" rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="background">
+      <div class="ControlPanel">
+        <input
+          type="range"
+          min="0"
+          max="360"
+          value="50"
+          class="HueSlider"
+          id="Hue"
+        />
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="100"
+          class="HueSlider SatSlider"
+          id="Sat"
+        />
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="HueSlider LigSlider"
+          id="Lig"
+        />
+      </div>
+      <div class="gridContainer">
+        <button onclick="changeColor()">RandomColor</button>
+        <button onclick="reSetColors()">Reset</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
