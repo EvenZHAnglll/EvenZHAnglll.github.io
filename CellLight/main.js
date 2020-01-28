@@ -7,13 +7,43 @@ var LigSlider = document.getElementById("Lig");
 var HSLValue = ["50", "100", "50"];
 
 SetColors();
+function SetRainbow() {
+  BG_div.style.background = `linear-gradient(to bottom,
+    hsl(0, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(0, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(0, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(60, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(120, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(180, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(240, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(300, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(360, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(60, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(120, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(180, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(240, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(300, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(360, ${HSLValue[1]}%, ${HSLValue[2]}%))`;
+}
+
 function SetColors() {
   SatSlider.value = HSLValue[1];
   HueSlider.value = HSLValue[0];
   LigSlider.value = HSLValue[2];
+  // SetRainbow();
   BG_div.style.backgroundColor = `hsl(${HSLValue[0]}, 
     ${HSLValue[1]}%, 
     ${HSLValue[2]}%)`;
+  HueSlider.style.background = `linear-gradient(
+    to right,
+    hsl(0, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(60, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(120, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(180, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(240, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(300, ${HSLValue[1]}%, ${HSLValue[2]}%),
+    hsl(360, ${HSLValue[1]}%, ${HSLValue[2]}%)
+  )`;
   SatSlider.style.background = `linear-gradient(to right, 
     hsl(${HSLValue[0]}, 0%, ${HSLValue[2]}%),
     hsl(${HSLValue[0]}, 100%, ${HSLValue[2]}%))`;
