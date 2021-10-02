@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Call Off Duty Clock</title>
-	<style type="text/css">
-		canvas{
 
-		}
-		html{
-			margin: 0px 0px 0px 0px;
-			padding:0;
-		}
-		body{
-			margin: 0px 0px 0px 0px;
-			padding:0;
-			overflow: hidden;
-		}
-	</style>
+<head>
+    <meta charset="utf-8">
+    <title>Call Off Duty Clock</title>
+    <style type="text/css">
+        canvas {}
+
+        html {
+            margin: 0px 0px 0px 0px;
+            padding: 0;
+        }
+
+        body {
+            margin: auto;
+            text-align: center;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
+
 <body>
-	<canvas></canvas>
-    <button onclick="sentNotification()">Set Notification</button>
-	<script src="calloffduty.js"></script>
+    <canvas></canvas>
+    <h1 id="title">What time do you get off work?</h1>
+
+    <div id="timer"></div>
+    <!-- <button onclick="sentNotification()">Set Notification</button> -->
+
+    <!-- <input type="time" id="appt" name="appt" min="00:00" max="18:00" step="300"> -->
+    <div id="TimerStarter">
+        <input type="number" id="timePicker-hour" min="0" max="23" value="17">
+        <input type="number" id="timePicker-minute" min="0" max="59" step="5" value="30">
+        <button onclick="StartCD()">Start count down</button>
+    </div>
+
+    <script src="calloffduty.js"></script>
 </body>
+
 </html>
