@@ -66,6 +66,13 @@ var countDownTimer
 
 
 function StartCD() {
+
+    Notification.requestPermission().then(function (result) {
+        // result可能是是granted, denied, 或default.
+        console.log(result)
+    });;
+
+
     targetHour = document.getElementById("timePicker-hour").value;
     targetMinute = document.getElementById("timePicker-minute").value;
     console.log("Set target time",targetHour, ":", targetMinute )
