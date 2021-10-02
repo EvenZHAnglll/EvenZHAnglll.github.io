@@ -1,4 +1,4 @@
-//https://evenzhanglll.github.io/project/extra/996ICU/Index.html
+//https://evenzhanglll.github.io/project/extra/996ICU
 
 function sentNotification() {
     if (Notification.permission !== 'granted') {
@@ -13,7 +13,7 @@ function sentNotification() {
             requireInteraction: true
         });
         notification.onclick = function () {
-            window.open('https://evenzhanglll.github.io/project/extra/996ICU/Index.html');
+            window.open('https://evenzhanglll.github.io/project/extra/996ICU');
         };
     }
 }
