@@ -3,15 +3,9 @@
 function sentNotification() {
     if (Notification.permission !== 'granted') {
         Notification.requestPermission().then(function (result) {
-            // result可能是是granted, denied, 或default.
-            console.log(result)
         });;
     }
     else {
-        Notification.requestPermission().then(function (result) {
-            // result可能是是granted, denied, 或default.
-            console.log(result)
-        });;
         var notification = new Notification('Get off work!', {
             icon: 'https://evenzhanglll.github.io/project/extra/996ICU/ExitSign.png',
             badge: 'https://evenzhanglll.github.io/project/extra/996ICU/ExitSign.png',
@@ -48,7 +42,7 @@ function updateTimer() {
 
     document.getElementById("timer")
         .innerHTML =
-        '<div>' +
+        '<div class="timer">' +
         h + '<span>:</span>' +
         m + '<span>:</span>' +
         s + '</div>';
@@ -69,7 +63,7 @@ function StartCD() {
 
     Notification.requestPermission().then(function (result) {
         // result可能是是granted, denied, 或default.
-        console.log(result)
+        console.log("request Permission:",result)
     });;
 
 

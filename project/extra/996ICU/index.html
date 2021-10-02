@@ -17,6 +17,52 @@
             text-align: center;
             padding: 0;
             overflow: hidden;
+            font-family: Roboto;
+            background-color: #068657;
+            color: #F4F8F4;
+        }
+
+        #title {
+            font-size: 75px;
+        }
+
+        .timer {
+            font-size: 200px;
+        }
+
+        .timePicker {
+            font-size: 50px;
+            height: 70px;
+        }
+
+        .timeNumber {
+            width: 140px;
+            vertical-align: middle;
+            border-radius: 10px;
+            border: #F4F8F4;
+        }
+
+        button {
+            font-size: 50px;
+            padding: 2px;
+
+            margin-top: 0px;
+            border-radius: 10px;
+            vertical-align: middle;
+            border: #F4F8F4;
+
+        }
+
+        img {
+            /* border: 20px solid #ffffff;
+            border-radius: 5px; */
+            outline: 5px solid #068657;
+            outline-offset: -13px;
+        }
+
+        #TimerStarter {
+            vertical-align: baseline;
+
         }
     </style>
 </head>
@@ -30,9 +76,9 @@
 
     <!-- <input type="time" id="appt" name="appt" min="00:00" max="18:00" step="300"> -->
     <div id="TimerStarter">
-        <input type="number" id="timePicker-hour" min="0" max="23" value="17">
-        <input type="number" id="timePicker-minute" min="0" max="59" step="5" value="30">
-        <button onclick="StartCD()">Start count down</button>
+        <input type="number" class="timePicker timeNumber" id="timePicker-hour" min="0" max="23" value="17">
+        <input type="number" class="timePicker timeNumber" id="timePicker-minute" min="0" max="59" step="5" value="30">
+        <button onclick="StartCD()">🏁</button>
     </div>
 
     <script src="calloffduty.js"></script>
